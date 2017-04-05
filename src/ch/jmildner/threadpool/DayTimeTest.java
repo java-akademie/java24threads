@@ -61,7 +61,7 @@ public class DayTimeTest
 
 		socket.close();
 	}
-
+ 
 
 
 	private static void timeServer_localhost_zeitmessung()
