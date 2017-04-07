@@ -2,22 +2,38 @@ package ch.jmildner.threadpool;
 
 public class ThreadPool
 {
-	private PoolRunner[] pool;
+	//private PoolRunner[] pool;
 	private PoolRunner[] free;
 	private int maxFree;
 
 
-	public ThreadPool(final int MAX_THREADS)
+
+	public void dump()
 	{
-		pool = new PoolRunner[MAX_THREADS];
+		final int MAX_THREADS = free.length;
+
+		for (int i = 0; i < MAX_THREADS; i++)
+		{
+//				System.out.println(
+//						pool[i].getName() + " " + pool[i].getState());
+				System.out.println(
+						free[i].getName() + " " + free[i].getState());
+		}
+	}
+
+
+	public ThreadPool(final int MAX_THREADS, final String SERVICE_NAME)
+	{
+//		pool = new PoolRunner[MAX_THREADS];
 		free = new PoolRunner[MAX_THREADS];
 
 		for (int i = 0; i < MAX_THREADS; i++)
 		{
 			PoolRunner t = new PoolRunner();
-			t.setName("poolRunner "+ i);
-			pool[i] = t;
+			t.setName("PoolRunnder." + (i + 1) + " - " + SERVICE_NAME);
+//			pool[i] = t;
 			free[i] = t;
+			t.setDaemon(true);
 			t.start();
 		}
 
@@ -31,9 +47,15 @@ public class ThreadPool
 		{
 			if (maxFree < 0)
 			{
+				System.out.println("vor wait in execute" + "  "
+						+ Thread.currentThread().getName());
 				wait();
 			}
+			System.out.println(
+					"maxFree vor  execute in execute() " + maxFree);
 			free[maxFree--].execute(action);
+			System.out.println(
+					"maxFree nach execute in execute() " + maxFree);
 		}
 		catch (InterruptedException e)
 		{
@@ -44,7 +66,10 @@ public class ThreadPool
 
 	synchronized public void noteCompletion(PoolRunner poolRunner)
 	{
+		System.out.println("vor free: " + maxFree + "  "
+				+ Thread.currentThread().getName());
 		free[++maxFree] = poolRunner;
+		System.out.println("vor notify: " + +maxFree);
 		notify();
 	}
 

@@ -15,17 +15,17 @@ public class DayTimeTest
 	{
 		// timeServer_time_nist_gov();
 		timeServer_localhost_zeitmessung();
-//		timeServer_localhost();
-//		timeServer_localhost();
-//		timeServer_localhost();
-//		timeServer_localhost();
-//		timeServer_localhost();
-//		timeServer_localhost();
-//		timeServer_localhost();
-//		timeServer_localhost();
-//		timeServer_localhost();
-//		timeServer_localhost();
-//		 timeServer_localhost_beenden();
+		// timeServer_localhost();
+		// timeServer_localhost();
+		// timeServer_localhost();
+		// timeServer_localhost();
+		// timeServer_localhost();
+		// timeServer_localhost();
+		// timeServer_localhost();
+		// timeServer_localhost();
+		// timeServer_localhost();
+		// timeServer_localhost();
+		 timeServer_localhost_beenden();
 
 	}
 
@@ -61,23 +61,29 @@ public class DayTimeTest
 
 		socket.close();
 	}
- 
+
 
 
 	private static void timeServer_localhost_zeitmessung()
 			throws Exception
 	{
-		long start = System.currentTimeMillis();
-		for (int i = 1; i <= 50000; i++) // 15000 dauert 4.5 sek.
+		final int AUFRUFE = 500;
+		
+		final long START = System.currentTimeMillis();
+		
+		for (int i = 1; i <= AUFRUFE; i++)
 		{
-			if(i%200==0)MyTools.sleep(20);
-			if(i%10000==0)MyTools.sleep(5000);
+			if (i % 10 == 0)
+				MyTools.sleep(1);
 			Socket socket = new Socket("localhost", 1300);
 
 			socket.close();
 		}
-		long stopp = System.currentTimeMillis();
-		System.out.println((stopp - start) + " Millisecunden!");
+		
+		final long STOPP = System.currentTimeMillis();
+		
+		System.out.printf("Dauer fuer %d Aufrufe  %d Millisekunden%n",
+				AUFRUFE, (STOPP - START));
 	}
 
 
