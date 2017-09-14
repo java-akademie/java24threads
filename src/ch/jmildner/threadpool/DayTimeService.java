@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Date;
 
-import ch.java_akademie.tools.NetTools;
+import ch.jmb.tools.NetTools;
 
 public class DayTimeService implements Runnable
 {

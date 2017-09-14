@@ -1,6 +1,6 @@
 package ch.jmildner.thread.servlet;
 
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.MyTools;
 import ch.jmildner.thread.servlet.TestMyServlet.za;
 
 public class MyServlet implements Servlet

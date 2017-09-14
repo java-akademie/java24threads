@@ -1,6 +1,6 @@
 package ch.jmildner.thread.threads;
 
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.MyTools;
 
 class Pipe
 {

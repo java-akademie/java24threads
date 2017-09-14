@@ -3,7 +3,7 @@ package ch.jmildner.thread.threads;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.MyTools;
 
 public class TabelleSynchr
 {
