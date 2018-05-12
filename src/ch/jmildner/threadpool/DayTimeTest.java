@@ -6,8 +6,8 @@ import java.io.InputStream;
 import java.net.ConnectException;
 import java.net.Socket;
 
-import ch.jmb.tools.MyTools;
 import ch.jmb.tools.NetTools;
+import ch.jmildner.tools.MyTools;
 
 public class DayTimeTest
 {

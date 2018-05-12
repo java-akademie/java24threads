@@ -5,22 +5,17 @@
 	<artifactId>java24threads</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<dependencies>
-
-
-		<!-- +=========================================+ -->
-		<!-- | MY DEPENDENCIES (MYTOOLS, LOG4J, JUNIT) | -->
-		<!-- +=========================================+ -->
-		<dependency>
-			<groupId>ch.jmb.dependencies</groupId>
-			<artifactId>mydeps</artifactId>
-			<version>1.0.0</version>
-			<type>pom</type>
-		</dependency>
-		<!-- +========================================+ -->
-
-
-	</dependencies>	
+  
+    <dependencies>
+        
+        <dependency>
+            <groupId>ch.jmildner</groupId>
+            <artifactId>dependenciesMY</artifactId>
+            <version>1.0.0</version>
+            <type>pom</type>
+        </dependency>
+        
+    </dependencies>
 	
 	<build>
 		<sourceDirectory>src</sourceDirectory>

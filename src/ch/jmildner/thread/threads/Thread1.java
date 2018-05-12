@@ -2,7 +2,7 @@ package ch.jmildner.thread.threads;
 
 import java.util.Date;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 class CountThread implements Runnable
 {

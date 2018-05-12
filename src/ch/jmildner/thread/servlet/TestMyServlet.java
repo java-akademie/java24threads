@@ -1,6 +1,6 @@
 package ch.jmildner.thread.servlet;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 public class TestMyServlet
 {
