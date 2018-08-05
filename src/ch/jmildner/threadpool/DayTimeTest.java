@@ -1,12 +1,12 @@
 package ch.jmildner.threadpool;
 
+import ch.jmb.tools.NetTools;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.ConnectException;
 import java.net.Socket;
 
-import ch.jmb.tools.NetTools;
 import ch.jmildner.tools.MyTools;
 
 public class DayTimeTest

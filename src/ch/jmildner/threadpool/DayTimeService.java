@@ -1,10 +1,10 @@
 package ch.jmildner.threadpool;
 
+import ch.jmb.tools.NetTools;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Date;
 
-import ch.jmb.tools.NetTools;
 
 public class DayTimeService implements Runnable
 {
