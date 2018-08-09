@@ -4,7 +4,7 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     
     <modelVersion>4.0.0</modelVersion>
-    <groupId>ch.jmildner</groupId>
+    <groupId>ch.jmildner.java</groupId>
     <artifactId>java24threads</artifactId>
     <version>1.8.0</version>
 
@@ -18,7 +18,7 @@
     <dependencies>
         
         <dependency>
-            <groupId>ch.jmildner</groupId>
+            <groupId>ch.jmildner.dependencies</groupId>
             <artifactId>dependenciesMY</artifactId>
             <version>1.0.0</version>
             <type>pom</type>
